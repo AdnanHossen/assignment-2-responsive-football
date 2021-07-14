@@ -574,6 +574,20 @@ a{
   color: #969BAB;
 }
 
+/* media queries */
+
+/* for mobile */
+@media only screen and (max-width:688px) {
+  .footer-part{
+    width: 280px;
+    height: 175px;
+  }
+  
+  .logo-container img{
+    width: 100%;
+  }
+}
+
 /* end of footer */
 
 /* by this whole part is completed */
