@@ -11,14 +11,6 @@
   box-sizing: border-box;
 }
 
-body{
-  font-family: var(--primaryFont);
-}
-
-a{
-  text-decoration: none;
-}
-
 :root{
   --slanttedText: 'Grand Hotel', cursive;
   --primaryFont: 'Catamaran', sans-serif;
@@ -29,6 +21,15 @@ a{
   --mainTransition: all 0.3s ease-in-out;
 }
 
+body{
+  font-family: var(--primaryFont);
+}
+
+a{
+  text-decoration: none;
+}
+
+
 .top-player-center{
   padding: 1.2rem 1.1rem;
   align-items: center;
@@ -37,6 +38,7 @@ a{
 .player-list{
   padding: 1.7rem;
 }
+/* end of globals */
 
 /* start of header */
 
@@ -74,12 +76,17 @@ a{
 
 .header-btn{
   padding: 10px 24px;
+  border-radius: 30px;
   background: #E02C6D;
   color: white;
   font-size: 16px;
   text-transform: capitalize;
   transition: var(--mainTransition);
 }
+.header-btn a{
+  color: white;
+}
+
 .fa-arrow-right{
   width: 24px;
   height: 24px;
@@ -103,6 +110,9 @@ a{
   width: 100%;
 }
 
+/* media queries */
+
+/* for mobile */
 
 @media only screen and (max-width:688px){
 
@@ -145,8 +155,7 @@ a{
   }
 }
 
-
-
+/* for tab */
 @media only screen and (min-width:688px) and (max-width: 992px) {
 
   .header-container{
@@ -177,8 +186,8 @@ a{
 
 /* end of header */
 
-/* start of middle part also as player container and details part */
 
+/* start of middle part also as player container and details part */
 
 .main-section{
   background-color: #152238;
@@ -222,9 +231,11 @@ a{
 .player-img{
   transition: var(--mainTransition);
 }
+
 .player:hover .player-img{
   transform: scale(1.2);
   opacity: .6;
+  cursor: not-allowed;
 }
 
 .player-img img{
@@ -237,11 +248,17 @@ a{
 }
 
 .player-details h3{
+  color: var(--mainTitleColor);
+  text-shadow: 1px 1px 1px black;
   text-transform: capitalize;
   font-size: 28px;
+  border-left: 3px solid goldenrod;
 }
 
 /* media queries */
+
+/* for mobile */
+
 @media only screen and (max-width:688px){
   .player-section{
     width: 1054px;
@@ -259,6 +276,7 @@ a{
   }
 }
 
+/* for tab */
 
 @media only screen and (min-width:688px) and (max-width:992px) {
   .player-section{
@@ -276,9 +294,12 @@ a{
     grid-row-gap: 27px;
   }
 }
+
 /* end of player container */
 
+
 /* start of news part */
+
 .latest-news-section{
   background-color: black;
 }
@@ -346,6 +367,10 @@ a{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+/* media quries */
+
+/* for tab  */
+
 @media only screen and (min-width: 689px) and (max-width:992px) {
   .news-list{
     display: grid;
@@ -359,6 +384,9 @@ a{
     flex-direction: column;
   }
 }
+
+
+/* for bigger screen  */
 
 @media only screen and (min-width: 992px) {
   .news-list{
@@ -384,6 +412,7 @@ a{
 }
 
 /* end of news section */
+
 
 /* start of forum */
 
@@ -473,6 +502,9 @@ a{
   margin-bottom: 15px;
 }
 
+/* media queries */
+
+/* for mobile */
 
 @media only screen and (max-width:689px) {
   .form-container{
@@ -497,14 +529,8 @@ a{
 }
 }
 
-
-
-
-
-
-
-
 /* end of form */
+
 
 /* start of footer */
 
@@ -535,9 +561,19 @@ a{
   width: 32px;
   height: 32px;
   color: #969BAB;
+  transition: var(--mainTransition);
+}
+
+.fab:hover, .fa-futbol:hover{
+  transform: scale(1.2) rotate(720deg);
+  color: orange;
 }
 
 .copyright{
   font-size: 18px;
   color: #969BAB;
 }
+
+/* end of footer */
+
+/* by this whole part is completed */
